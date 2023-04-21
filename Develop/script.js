@@ -6,19 +6,19 @@ headerDateEl.textContent = headerDateJs; // The headerDate element's text conten
 
 
 function UserInput() {
-    // Loop through each time block
-    for (let i = 9; i <= 17; i++) {
-      // Get the saved input for this time block
-      var userInput = localStorage.getItem(`hour-${i}`);
-      // If there is saved input, set the value of the textarea
-      if (userInput) {
-        var textarea = document.querySelector(`#hour-${i} .description`);
-        textarea.value = userInput;
-      }
+  // Loop through each time block
+  for (let i = 9; i <= 17; i++) {
+    // Get the saved input for this time block
+    var userInput = localStorage.getItem(`hour-${i}`);
+    // If there is saved input, set the value of the textarea
+    if (userInput) {
+      var textarea = document.querySelector(`#hour-${i} .description`);
+      textarea.value = userInput;
     }
   }
-  // Call the function to load saved inputs on page load
-  UserInput();
+}
+// Call the function to load saved inputs on page load
+UserInput();
 
 
 
@@ -40,10 +40,9 @@ function loadTasksFromLocalStorage() {
 }
 
 
-
 function updateTimeBlocks() {
   var currentHour = dayjs().hour(); // Get the current hour using the day.js library
-// Loop through each time block
+  // Loop through each time block
   $(".time-block").each(function () { //for each time block, let the following function take place
     var blockHour = parseInt($(this).attr("id").split("-")[1]); // Get the hour from the id attribute of the time block
     // Compare the block hour to the current hour and add the appropriate class
@@ -67,9 +66,12 @@ function saveTasktoLocalStorage(hourId) {
 }
 // Add event listeners to each textarea element to save the user input when it changes
 for (let i = 9; i <= 17; i++) {
-  var hourId = `hour-${i}`;
-  var textareaEl = document.getElementById(hourId).querySelector('textarea');
-  textareaEl.addEventListener('btn', function() {
+  let hourId = `hour-${i}`;
+  // grabbing the button element
+  var buttonEl = document.getElementById(hourId).querySelector('button');
+  console.log(buttonEl);
+  // add event lisnter for a 'click' event
+  buttonEl.addEventListener('click', function () {
     saveTasktoLocalStorage(hourId);
   });
 }
