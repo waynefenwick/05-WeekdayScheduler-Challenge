@@ -59,7 +59,7 @@ updateTimeBlocks(); // Call the function to update the time blocks on page load
 
 
 
-function saveTasktoLocalStorage(hourId) {
+function saveTaskToLocalStorage(hourId) {
   var textareaEl = document.getElementById(hourId).querySelector('textarea');
   var task = textareaEl.value;
   localStorage.setItem(hourId, task);
@@ -72,7 +72,7 @@ for (let i = 9; i <= 17; i++) {
   console.log(buttonEl);
   // add event lisnter for a 'click' event
   buttonEl.addEventListener('click', function () {
-    saveTasktoLocalStorage(hourId);
+    saveTaskToLocalStorage(hourId);
   });
 }
 

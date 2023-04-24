@@ -12,17 +12,17 @@ What are the steps required to install your project? Provide a step-by-step desc
 ## Usage
 
 The Work Day Scheduler is easy to use.
-    1. Click on the field next to the time you would like to add an event.
-    2. Type in your event.
-    3. Click on the save button to the right.
-    4. Do the same for other times during the day.
-    5. Yo can close your browser window and open it again. Yopur events will be saved.
+1. Click on the field next to the time you would like to add an event.
+2. Type in your event.
+3. Click on the save button to the right.
+4. Do the same for other times during the day.
+5. Yo can close your browser window and open it again. Yopur events will be saved.
     
 # View on the web
     https://waynefenwick.github.io/05-WeekdayScheduler-Challenge/
 
 # Mockup
-![Start.](./Assets/05-third-party-apis-homework-demo.gif)
+![Start.](./Assets/Weekday-Schedule.png)
 
 
 
