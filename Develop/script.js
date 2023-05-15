@@ -57,26 +57,24 @@ function updateTimeBlocks() {
 }
 updateTimeBlocks(); // Call the function to update the time blocks on page load
 
-
-
 function saveTaskToLocalStorage(hourId) {
   var textareaEl = document.getElementById(hourId).querySelector('textarea');
   var task = textareaEl.value;
   localStorage.setItem(hourId, task);
 }
+
 // Add event listeners to each textarea element to save the user input when it changes
 for (let i = 9; i <= 17; i++) {
   let hourId = `hour-${i}`;
   // grabbing the button element
   var buttonEl = document.getElementById(hourId).querySelector('button');
   console.log(buttonEl);
-  // add event lisnter for a 'click' event
-  buttonEl.addEventListener('click', function () {
+  // add event listner for a 'click' event
+  buttonEl.addEventListener('click',
+    function () {
     saveTaskToLocalStorage(hourId);
   });
 }
-
-
 
 // Update the time blocks every hour
 setInterval(function () {
